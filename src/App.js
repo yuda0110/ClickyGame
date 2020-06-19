@@ -13,20 +13,23 @@ class App extends Component {
     animals: animals,
     score: 0,
     topScore: 0,
-    clickedIds: []
+    clickedIds: [],
+    message: 'Click an image to begin!'
   }
 
   clickHandler = id => {
     if (this.state.clickedIds.includes(id)) {
       this.setState({
         score: 0,
-        clickedIds: []
+        clickedIds: [],
+        message: 'You guessed incorrectly!'
       })
     } else {
       this.setState({
         score: this.state.score + 1,
         topScore: this.state.topScore <= this.state.score ? this.state.score + 1 : this.state.topScore,
-        clickedIds: [...this.state.clickedIds, id]
+        clickedIds: [...this.state.clickedIds, id],
+        message: 'You guessed correctly!'
       })
     }
     console.log(this.state.clickedIds)
@@ -38,6 +41,7 @@ class App extends Component {
         <Nav
           score={this.state.score}
           topScore={this.state.topScore}
+          message={this.state.message}
         />
         <Header />
         <Wrapper>

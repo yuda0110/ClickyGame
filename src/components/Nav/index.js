@@ -6,6 +6,7 @@ const Nav = props => {
     <nav>
       <div className="nav-container">
         <div className="site-name">Clicky Game</div>
+        <p>{props.message}</p>
         <div className="score-container">
           <dl className="score">
             <dt>Score</dt>
