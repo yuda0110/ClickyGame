@@ -19,7 +19,14 @@ class App extends Component {
         <Nav />
         <Header />
         <Wrapper>
-          <ImageCard />
+          {this.state.animals.map(animal => (
+            <ImageCard
+              id={animal.id}
+              key={animal.id}
+              name={animal.name}
+              image={animal.image}
+            />
+          ))}
         </Wrapper>
       </>
     )
