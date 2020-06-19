@@ -1,12 +1,60 @@
-body {
+/* ========== VARIABLES ========== */
+:root {
+  --color-yellow-light: #f7e287;
+  --color-yellow: #f7d11e;
+  --color-green: #65bfac;
+  --color-blue: #0091ff;
+  --color-blue-light1: #9fd6ff;
+  --color-blue-light2: #e9f6fd;
+  --color-white: #fff;
+  --color-black: #333;
+  --color-grey1: #272727;
+  --color-grey2: #c1c1c1;
+  --color-grey3: #6a6a6a;
+  --color-grey-light: #eee;
+  --font-heading: 'Ubuntu', sans-serif;
+  --font-default: 'Open Sans', sans-serif;
+}
+
+/* ========== COMMON ========== */
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 50%; /* 8px/16px = 50% -> 1rem = 8px */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  font-family: var(--font-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--color-black);
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+
+/* ========== HEADINGS ========== */
 h1,
 h2,
 h3 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font-heading);
+}
+
+
+@media screen and (min-width: 801px) {
+  html {
+    font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+  }
 }

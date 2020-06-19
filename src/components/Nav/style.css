@@ -1,7 +1,43 @@
 nav {
     width: 100%;
+    background: var(--color-green);
+}
+
+.nav-container {
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+.site-name {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.score-container {
+    background: var(--color-white);
+    border-radius: .5rem;
+    display: flex;
+}
+
+.score {
+    padding: .3rem 1rem;
+    display: flex;
+}
+
+.score:not(:last-child) {
+    border-right: 2px dotted var(--color-green);
+}
+
+.score dt {
+    margin-right: .5rem;
+    color: var(--color-green);
+    font-weight: 700;
+}
+
