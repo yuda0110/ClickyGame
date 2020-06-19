@@ -9,11 +9,11 @@ const Nav = props => {
         <div className="score-container">
           <dl className="score">
             <dt>Score</dt>
-            <dd>0</dd>
+            <dd>{props.score}</dd>
           </dl>
           <dl className="score">
             <dt>Top Score</dt>
-            <dd>0</dd>
+            <dd>{props.topScore}</dd>
           </dl>
         </div>
       </div>

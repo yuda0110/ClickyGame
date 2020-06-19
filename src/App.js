@@ -10,13 +10,35 @@ import animals from './animals.json'
 
 class App extends Component {
   state = {
-    animals
+    animals: animals,
+    score: 0,
+    topScore: 0,
+    clickedIds: []
+  }
+
+  clickHandler = id => {
+    if (this.state.clickedIds.includes(id)) {
+      this.setState({
+        score: 0,
+        clickedIds: []
+      })
+    } else {
+      this.setState({
+        score: this.state.score + 1,
+        topScore: this.state.topScore <= this.state.score ? this.state.score + 1 : this.state.topScore,
+        clickedIds: [...this.state.clickedIds, id]
+      })
+    }
+    console.log(this.state.clickedIds)
   }
 
   render() {
     return (
       <>
-        <Nav />
+        <Nav
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
         <Header />
         <Wrapper>
           {this.state.animals.map(animal => (
@@ -25,6 +47,7 @@ class App extends Component {
               key={animal.id}
               name={animal.name}
               image={animal.image}
+              click={this.clickHandler}
             />
           ))}
         </Wrapper>
