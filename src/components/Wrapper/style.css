@@ -1,9 +1,9 @@
 .wrapper {
     width: 100%;
-    max-width: 960px;
+    max-width: 964px;
     margin: 0 auto;
     padding: 1rem 0;
-    background: #ECEFF1;
+    background: var(--color-grey-light);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -29,5 +29,12 @@
 @media screen and (min-width: 501px) {
     .wrapper {
         padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 965px) {
+    .wrapper {
+        border: 2px solid var(--color-green-light);
+        border-radius: .5rem;
     }
 }

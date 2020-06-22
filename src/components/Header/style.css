@@ -1,19 +1,29 @@
 header {
-    padding: var(--height-nav-mobile) 2rem 2rem;
+    padding: calc(var(--height-nav-mobile) + 5rem) 2rem 5rem;
+    text-align: center;
 }
 
 h1 {
     font-size: 5rem;
     text-align: center;
+    text-shadow:
+            -5px -5px 0 var(--color-white),
+            5px -5px 0 var(--color-white),
+            -5px 5px 0 var(--color-white),
+            5px 5px 0 var(--color-white);
 }
 
 header p {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: inline-block;
     text-align: left;
+    background: var(--color-yellow-light);
 }
 
 @media screen and (min-width: 501px) {
     header {
-        padding: var(--height-nav-pc) 2rem 2rem;
+        padding: calc(var(--height-nav-pc) + 5rem) 2rem 5rem;
     }
 
     header p {

@@ -1,9 +1,10 @@
 /* ========== VARIABLES ========== */
 :root {
-  --color-yellow-light: #f7e287;
+  --color-yellow-light: #ffeda5;
   --color-yellow: #f7d11e;
   --color-red: #ff0f0f;
   --color-green: #65bfac;
+  --color-green-light: #c2dbd5;
   --color-blue: #0091ff;
   --color-blue-light1: #9fd6ff;
   --color-blue-light2: #e9f6fd;
@@ -45,6 +46,7 @@ body {
   position: relative;
   font-size: 1.6rem;
   font-weight: 300;
+  background: url("./images/animal-bg.jpg") repeat;
 }
 
 
