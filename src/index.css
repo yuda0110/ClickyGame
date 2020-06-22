@@ -15,6 +15,8 @@
   --color-grey-light: #eee;
   --font-heading: 'Ubuntu', sans-serif;
   --font-default: 'Open Sans', sans-serif;
+  --height-nav-mobile: 14rem;
+  --height-nav-pc: 5rem;
 }
 
 /* ========== COMMON ========== */
