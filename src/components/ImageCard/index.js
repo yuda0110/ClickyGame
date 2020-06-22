@@ -1,15 +1,15 @@
 import React from 'react'
 import './style.css'
 
-const ImageCard = props => {
+const ImageCard = ({ click, image, name }) => {
   return (
     <div
       className='card'
-      onClick={() => props.click(props.id)}
+      onClick={click}
     >
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/${props.image}`}
-        alt={props.name}
+        src={`${process.env.PUBLIC_URL}/assets/images/${image}`}
+        alt={name}
       />
     </div>
   )

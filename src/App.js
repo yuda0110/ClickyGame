@@ -14,6 +14,7 @@ class App extends Component {
     score: 0,
     topScore: 0,
     clickedIds: [],
+    correct: 'default',
     message: 'Click an image to begin!'
   }
 
@@ -25,25 +26,39 @@ class App extends Component {
     return array
   }
 
-  clickHandler = id => {
-    if (this.state.clickedIds.includes(id)) {
+  clickImageHandler = id => {
+    return () => {
+      if (this.state.clickedIds.includes(id)) {
+        this.setState({
+          score: 0,
+          clickedIds: [],
+          correct: false,
+          message: 'You guessed incorrectly!'
+        })
+        setTimeout(() => {
+          this.setState({
+            correct: 'default'
+          })
+        }, 1500)
+      } else {
+        this.setState({
+          score: this.state.score + 1,
+          topScore: this.state.topScore <= this.state.score ? this.state.score + 1 : this.state.topScore,
+          clickedIds: [...this.state.clickedIds, id],
+          correct: true,
+          message: 'You guessed correctly!'
+        })
+        setTimeout(() => {
+          this.setState({
+            correct: 'default'
+          })
+        }, 1500)
+      }
+      console.log(this.state.clickedIds)
       this.setState({
-        score: 0,
-        clickedIds: [],
-        message: 'You guessed incorrectly!'
-      })
-    } else {
-      this.setState({
-        score: this.state.score + 1,
-        topScore: this.state.topScore <= this.state.score ? this.state.score + 1 : this.state.topScore,
-        clickedIds: [...this.state.clickedIds, id],
-        message: 'You guessed correctly!'
+        animals: this.shuffleArr(this.state.animals)
       })
     }
-    console.log(this.state.clickedIds)
-    this.setState({
-      animals: this.shuffleArr(this.state.animals)
-    })
   }
 
   render() {
@@ -52,6 +67,7 @@ class App extends Component {
         <Nav
           score={this.state.score}
           topScore={this.state.topScore}
+          correct={this.state.correct}
           message={this.state.message}
         />
         <Header />
@@ -62,7 +78,7 @@ class App extends Component {
               key={animal.id}
               name={animal.name}
               image={animal.image}
-              click={this.clickHandler}
+              click={this.clickImageHandler(animal.id)}
             />
           ))}
         </Wrapper>
