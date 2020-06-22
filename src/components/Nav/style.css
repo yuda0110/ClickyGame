@@ -30,7 +30,7 @@ nav {
 }
 
 .message.correct {
-    animation: flashingYellow .5s linear;
+    animation: flashingYellow .4s linear;
     animation-iteration-count: 3;
 }
 

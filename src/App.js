@@ -39,7 +39,7 @@ class App extends Component {
           this.setState({
             correct: 'default'
           })
-        }, 1500)
+        }, 1200)
       } else {
         this.setState({
           score: this.state.score + 1,
@@ -52,7 +52,7 @@ class App extends Component {
           this.setState({
             correct: 'default'
           })
-        }, 1500)
+        }, 1200)
       }
       console.log(this.state.clickedIds)
       this.setState({
@@ -71,7 +71,7 @@ class App extends Component {
           message={this.state.message}
         />
         <Header />
-        <Wrapper>
+        <Wrapper correct={this.state.correct}>
           {this.state.animals.map(animal => (
             <ImageCard
               id={animal.id}

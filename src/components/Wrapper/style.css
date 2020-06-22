@@ -8,3 +8,20 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.wrapper.shake {
+    animation: shake .15s linear;
+    animation-iteration-count: 4;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(.8rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
