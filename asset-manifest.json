@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ClickyGame/static/css/main.cf8b61d6.chunk.css",
+    "main.js": "/ClickyGame/static/js/main.f5559315.chunk.js",
+    "main.js.map": "/ClickyGame/static/js/main.f5559315.chunk.js.map",
+    "runtime-main.js": "/ClickyGame/static/js/runtime-main.f02c0ab2.js",
+    "runtime-main.js.map": "/ClickyGame/static/js/runtime-main.f02c0ab2.js.map",
+    "static/js/2.73ffcd4f.chunk.js": "/ClickyGame/static/js/2.73ffcd4f.chunk.js",
+    "static/js/2.73ffcd4f.chunk.js.map": "/ClickyGame/static/js/2.73ffcd4f.chunk.js.map",
+    "index.html": "/ClickyGame/index.html",
+    "precache-manifest.894165cb481570df4060dc5da00ddeeb.js": "/ClickyGame/precache-manifest.894165cb481570df4060dc5da00ddeeb.js",
+    "service-worker.js": "/ClickyGame/service-worker.js",
+    "static/css/main.cf8b61d6.chunk.css.map": "/ClickyGame/static/css/main.cf8b61d6.chunk.css.map",
+    "static/js/2.73ffcd4f.chunk.js.LICENSE.txt": "/ClickyGame/static/js/2.73ffcd4f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ClickyGame/static/media/animal-bg.eea67050.jpg",
+    "static/media/logo.svg": "/ClickyGame/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f02c0ab2.js",
+    "static/js/2.73ffcd4f.chunk.js",
+    "static/css/main.cf8b61d6.chunk.css",
+    "static/js/main.f5559315.chunk.js"
+  ]
+}
