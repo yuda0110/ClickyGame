@@ -34,6 +34,7 @@
 
 @media screen and (min-width: 965px) {
     .wrapper {
+        margin-bottom: 5rem;
         border: 2px solid var(--color-green-light);
         border-radius: .5rem;
     }
